@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">عن المشروع</h3>
             <p className="text-sm opacity-90">
-              مشروع تفاعلي يستعرض الجغرافيا والجيولوجيا والمواطنة الرقمية في المنطقة الشرقية بالمملكة العربية السعودية.
+              مشروع تفاعلي يستعرض الدراسات الأدبية والدراسات النفسية والاجتماعية، مع التركيز على العلاقة بين الأدب والثقافة والصحة النفسية.
             </p>
           </div>
 
@@ -22,9 +22,9 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">الروابط السريعة</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="/" className="hover:underline">الرئيسية</a></li>
-              <li><a href="/geography" className="hover:underline">الجغرافيا والبيئة</a></li>
-              <li><a href="/geology" className="hover:underline">علوم الأرض</a></li>
-              <li><a href="/digital-citizenship" className="hover:underline">المواطنة الرقمية</a></li>
+              <li><a href="/literature" className="hover:underline">الدراسات الأدبية</a></li>
+              <li><a href="/psychology" className="hover:underline">الدراسات النفسية</a></li>
+              <li><a href="/quiz" className="hover:underline">الأسئلة التفاعلية</a></li>
             </ul>
           </div>
 
@@ -32,10 +32,10 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">المصادر</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">وزارة البيئة والمياه والزراعة</a></li>
-              <li><a href="#" className="hover:underline">هيئة المساحة الجيولوجية السعودية</a></li>
-              <li><a href="#" className="hover:underline">Wikipedia - Eastern Province</a></li>
               <li><a href="#" className="hover:underline">وزارة التعليم</a></li>
+              <li><a href="#" className="hover:underline">المكتبة الرقمية العربية</a></li>
+              <li><a href="#" className="hover:underline">منظمة الصحة النفسية</a></li>
+              <li><a href="#" className="hover:underline">مراكز الدعم النفسي</a></li>
             </ul>
           </div>
         </div>
@@ -52,14 +52,14 @@ export default function Footer() {
             <div>
               <h4 className="font-bold mb-3">المعلمات والموجهون</h4>
               <p className="text-sm opacity-90">
-                فريق التوجيه والإشراف على المشروع
+                نسيم القحطاني (الدراسات الأدبية) | عمشاء السبيعي (الدراسات النفسية والاجتماعية)
               </p>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="border-t border-primary-foreground border-opacity-20 pt-6 text-center text-sm opacity-75">
-            <p>&copy; 2026 مشروع البيئة والتقنية – المنطقة الشرقية. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2026 مشروع الثقافة والنفس. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </div>

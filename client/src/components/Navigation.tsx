@@ -24,7 +24,7 @@ export default function Navigation() {
               </div>
               <div className="hidden sm:block">
                 <span className="font-bold text-lg text-primary block">الثقافة والنفس</span>
-                <span className="text-xs text-muted-foreground">نسيم القحطاني | عمشاء القحطاني</span>
+                <span className="text-xs text-muted-foreground">نسيم القحطاني | عمشاء السبيعي</span>
               </div>
             </div>
           </Link>
