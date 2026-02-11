@@ -43,43 +43,43 @@
 }
 
 :root {
-  /* Primary Green - Sustainability & Life */
-  --primary: #1B6B3A;
-  --primary-foreground: #F0F7F3;
-  --sidebar-primary: #1B6B3A;
-  --sidebar-primary-foreground: #F0F7F3;
+  /* Primary Green - Classical Literary Theme */
+  --primary: #2d5016;
+  --primary-foreground: #f5f3f0;
+  --sidebar-primary: #3d6b1f;
+  --sidebar-primary-foreground: #f5f3f0;
   
-  /* Chart Colors - Environmental Data */
-  --chart-1: #27AE60;
-  --chart-2: #0066CC;
-  --chart-3: #E67E22;
-  --chart-4: #E74C3C;
-  --chart-5: #D4A574;
+  /* Chart Colors - Literary & Psychological */
+  --chart-1: #8b7355;
+  --chart-2: #5a7c59;
+  --chart-3: #4a6fa5;
+  --chart-4: #2d5016;
+  --chart-5: #6b4423;
   
   --radius: 0.65rem;
-  --background: #FAFAF8;
-  --foreground: #1F2937;
-  --card: #FFFFFF;
-  --card-foreground: #1F2937;
-  --popover: #FFFFFF;
-  --popover-foreground: #1F2937;
-  --secondary: #0066CC;
-  --secondary-foreground: #FFFFFF;
-  --muted: #E5E7EB;
-  --muted-foreground: #6B7280;
-  --accent: #D4A574;
-  --accent-foreground: #1F2937;
-  --destructive: #E74C3C;
-  --destructive-foreground: #FFFFFF;
-  --border: #D1D5DB;
-  --input: #F3F4F6;
-  --ring: #1B6B3A;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #1F2937;
-  --sidebar-accent: #F0F7F3;
-  --sidebar-accent-foreground: #1B6B3A;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #1B6B3A;
+  --background: oklch(0.98 0.001 70);
+  --foreground: oklch(0.2 0.01 50);
+  --card: oklch(0.96 0.001 70);
+  --card-foreground: oklch(0.2 0.01 50);
+  --popover: oklch(0.96 0.001 70);
+  --popover-foreground: oklch(0.2 0.01 50);
+  --secondary: oklch(0.88 0.05 70);
+  --secondary-foreground: oklch(0.3 0.01 50);
+  --muted: oklch(0.92 0.01 70);
+  --muted-foreground: oklch(0.45 0.01 50);
+  --accent: oklch(0.7 0.08 120);
+  --accent-foreground: oklch(0.2 0.01 50);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.01 70);
+  --input: oklch(0.9 0.01 70);
+  --ring: oklch(0.5 0.15 120);
+  --sidebar: oklch(0.96 0.001 70);
+  --sidebar-foreground: oklch(0.2 0.01 50);
+  --sidebar-accent: oklch(0.88 0.05 70);
+  --sidebar-accent-foreground: oklch(0.2 0.01 50);
+  --sidebar-border: oklch(0.9 0.01 70);
+  --sidebar-ring: oklch(0.5 0.15 120);
 }
 
 .dark {
@@ -122,18 +122,14 @@
     @apply border-border outline-ring/50;
   }
   
-  html {
-    font-family: 'Cairo', 'Poppins', sans-serif;
-  }
-  
   body {
     @apply bg-background text-foreground;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Amiri', serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Cairo', sans-serif;
-    font-weight: 700;
+    font-family: 'Lora', serif;
+    @apply font-bold;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

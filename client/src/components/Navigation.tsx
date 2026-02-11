@@ -7,9 +7,9 @@ export default function Navigation() {
 
   const navItems = [
     { label: 'الرئيسية', href: '/' },
-    { label: 'الجغرافيا والبيئة', href: '/geography' },
-    { label: 'علوم الأرض', href: '/geology' },
-    { label: 'المواطنة الرقمية', href: '/digital-citizenship' },
+    { label: 'الدراسات الأدبية', href: '/literature' },
+    { label: 'الدراسات النفسية', href: '/psychology' },
+    { label: 'الأسئلة التفاعلية', href: '/quiz' },
   ];
 
   return (
@@ -23,8 +23,8 @@ export default function Navigation() {
                 <span className="text-white font-bold text-lg">🌍</span>
               </div>
               <div className="hidden sm:block">
-                <span className="font-bold text-lg text-primary block">البيئة والتقنية</span>
-                <span className="text-xs text-muted-foreground">شقراء مجرشي | سارة آل باطحين | نورة القصيبي</span>
+                <span className="font-bold text-lg text-primary block">الثقافة والنفس</span>
+                <span className="text-xs text-muted-foreground">نسيم القحطاني | عمشاء القحطاني</span>
               </div>
             </div>
           </Link>
