@@ -82,9 +82,9 @@ export default function Literature() {
       poets: ['عمر بن أبي ربيعة', 'جميل بثينة', 'قيس ليلى', 'الأخطل', 'الفرزدق', 'جرير'],
       quotes: [
         {
-          text: 'وَأنا أَبـيُّ الوفـاءَ مـن كلِّ مـنـزلِ\nحَتّى أُسْقِطَ حُلْمِ الوَفاءِ في كُلِّ وصـلِ',
+          text: 'إَنَّ العُيونَ اللَاتي في طرفِها حَورٌ\nقَتَلْنَنا ثُمَّ لَم يُحيينَ قَتلانا\nيَصرَعنَ ذا اللُبّ حَتّى لا حِراكَ بِهِ\nوَهُنَّ أَضعَفَ خَلقِ اللَهِ أَركانا',
           poet: 'جرير بن عطية',
-          explanation: 'هذا البيت يوضّح الوفاء والعلاقات الإنسانية في المجتمع الأموي، وكيف تغير التركيز من البيئة البدويّة للحياة الاجتماعية الأوسع.'
+          explanation: 'هذا الشعر يعبر عن قوة الحب وتأثيره على النفس الإنسانية، ويعكس العلاقات الإنسانية في المجتمع الأموي.'
         }
       ],
       image: 'https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/KKzXi8lCJ3FUaXxFXp3gir-img-4_1770840110000_na1fn_Y2xhc3NpY2FsLXdyaXRpbmctZGVzaw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L0tLelhpOGxDSjNGVWFYeEZYcDNnaXItaW1nLTRfMTc3MDg0MDExMDAwMF9uYTFmbl9ZMnhoYzNOcFkyRnNMWGR5YVhScGJtY3RaR1Z6YXcucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=qEv9adN4Rq8qBSz83ZObY5eqy26A2gUpsDJrf689DVpYiBmXUyNhkM50QJD3cJ4Oo123uNyOYRnSzRxK22A36kKd-lSlqnV-yNj5puwCiJwLp6onCpbK1w2zT7kuuQe0b4Y09xH1bdcHXguQQmhUFu~aThKx7idL~zFdSOX1velWCz-juygtiMyv7~v9WXEEJJk~LEh8I5IHBJJoaX07KjEe37k8KI2b-IUtCOUGC41q6ik5jcgkJdGxetrunniLSfi6iw5Dcg3f-9sLeC8GS0rpVlkOKO0StAbGRC-KR0GNiwgl4wt3hd1mt-c4xX3EED1PqMB7xjlmLovBxMHlIA__'
@@ -105,9 +105,9 @@ export default function Literature() {
       poets: ['أبو نواس', 'المتنبي', 'أبو الطيب المتنبي', 'البحتري', 'ابن الرومي', 'الشريف الرضي'],
       quotes: [
         {
-          text: 'وَإنَّما الحُسنُ مِنْ صِفاتِ الحُسْنِ دَائِماً\nكَمِنْ وَرْدٍ يُزْهِرُ فِي بُسْتَانِ الدُّهْرِ خَضِرِ',
-          poet: 'بشار بن برد',
-          explanation: 'في العصر العباسي بدأ الشعر يتجه نحو التأمل الوجداني والوصف الفني للطبيعة، وما يعكسه جمال البيئة على النفس.'
+          text: 'الخَيلُ وَاللَيلُ وَالبَيداءُ تَعرِفني\nوَالسَيفُ وَالرُمحُ وَالقِرطاسُ وَالقَلمُ\nأَنامُ مِلءَ جُفوني عَن شَوارِدها\nوَيَسهَرُ الخَلْقُ جَراها وَيخْتِصمُ',
+          poet: 'أبو الطيب المتنبي',
+          explanation: 'هذه الأبيات من أشهر قصائد المتنبي وتعبر عن الفخر والعزة والشجاعة والعلم والفن الذي برع في العصر العباسي.'
         }
       ],
       image: 'https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/KKzXi8lCJ3FUaXxFXp3gir-img-3_1770840101000_na1fn_cHN5Y2hvbG9naWNhbC13ZWxsbmVzcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L0tLelhpOGxDSjNGVWFYeEZYcDNnaXItaW1nLTNfMTc3MDg0MDEwMTAwMF9uYTFmbl9jSE41WTJodmJHOW5hV05oYkMxM1pXeHNibVZ6Y3cucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fIlVt8BB-R5wzL0dgQdgMG28P1tE9eRKMyUZ3U7Q1s0JQ5PUfUIdK2ba4WeXZjouFI9l0Gw6ZzRgW9CX2hCyp6wWufUJPIb1FdPjcaSuXsj4nWBUcry9RNdnlqkwVMtEdhrdgd7DTlPTfhA9HPOtXoDYuB3l7uEC6jFpIYxoEMXHH39HYk-s-~EhlI9ffS1ZrlnZHHe0bBFvUtca-lxO9vLu2-a3G~d7dG4XH0MXwdNkgbxvBIChMVGnzS4gkt7fXRcIuMvy8vxuFIWO0wIalXexU0gLUT~w1Mfn1Sl5SYikH4~TKpIRfpVeaQ5HLQAJrwHKpzKmxUElAylIroY0tA__'
@@ -128,9 +128,9 @@ export default function Literature() {
       poets: ['نزار قباني', 'محمود درويش', 'أحمد شوقي', 'حافظ إبراهيم', 'سيد قطب', 'عز الدين إسماعيل'],
       quotes: [
         {
-          text: 'أُحِبُّكِ كَثِيرًا كَثِيرًا كَثِيرًا\nحَتَّى أَظُنَّ أَنِّي أُحِبُّكِ كُلَّ مَا فِي العَالَمِ طُولاً وَعَرضًا',
+          text: 'اغضبي كما تشاءي.. واجرح أحاسيسي كما تشاءي\nحطّم أواني الزهر والمرايا\nهدّد بحب امرأة سوايا.. فكل ما تفعله سواء\nكل ما تقوله سواء',
           poet: 'نزار قباني',
-          explanation: 'هذا البيت يعكس التجربة الإنسانية الحديثة، التعبير عن المشاعر بعفوية مباشرة، وهي سمة في الأدب المعاصر.'
+          explanation: 'هذه الأبيات تعبر عن العمق العاطفي للتجربة الإنسانية الحديثة، والتعبير عن المشاعر بعفوية مباشرة، وهي سمة مميزة للأدب المعاصر.'
         }
       ],
       image: 'https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/KKzXi8lCJ3FUaXxFXp3gir-img-5_1770840104000_na1fn_bWluZC1jb250ZW1wbGF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L0tLelhpOGxDSjNGVWFYeEZYcDNnaXItaW1nLTVfMTc3MDg0MDEwNDAwMF9uYTFmbl9iV2x1WkMxamIyNTBaVzF3YkdGMGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=cpswVzXFFSm9QaDbz7upvv3JvZakTLLtM1Ifd0uCyLBGYDo~~EyIrQIMM02jjXFewnMuXUmVEZqvx0SEQi7PjErMqXz8erZqJ2ONL~8XMf5-mJSZAGTKlzNKbSslsjdL7L6DUSBoMjTQ1mPyySVqXPoRSf1ikHvKxW47Nr3W76QhV07Oi454DF1Vh3NWP-MdQ-pYN0tLWOKqtzfENzjasy6136qZOhBvaAus5WhCVHNf7lAn4iR6yRS~l2DmIynO9hFux20zMSJP3duGTutFfh9xyADYvTWlMJ8xX3H-96i~Tx3zVTMyv3KjFwLRnSbigPx3QeypFLGpj0YcRXMNg__'
