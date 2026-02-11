@@ -4,15 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { AlertCircle, Droplets, Wind, Zap } from 'lucide-react';
-
-/**
- * Geography Page
- * Design Philosophy: Sustainable Modernity
- * - Interactive environmental map
- * - Pollution hotspots visualization
- * - Environmental impact analysis
- */
+import { AlertCircle, Droplets, Wind, Zap, ChevronRight, ChevronLeft } from 'lucide-react';
 
 interface PollutionPoint {
   id: string;
@@ -26,6 +18,7 @@ interface PollutionPoint {
 
 export default function Geography() {
   const [selectedType, setSelectedType] = useState<string>('all');
+  const [currentMapIndex, setCurrentMapIndex] = useState(0);
 
   const pollutionPoints: PollutionPoint[] = [
     {
@@ -73,6 +66,11 @@ export default function Geography() {
       lat: 26.1551,
       lng: 50.1971
     }
+  ];
+
+  const mapImages = [
+    'https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/sAM8WWkN7xIXATkXrcNuyK-img-5_1770837799000_na1fn_ZWFzdGVybi1wcm92aW5jZS1tYXA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L3NBTThXV2tON3hJWEFUa1hyY051eUstaW1nLTVfMTc3MDgzNzc5OTAwMF9uYTFmbl9aV0Z6ZEdWeWJpMXdjbTkyYVc1alpTMXRZWEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=c04j39jEPa9V1CVP4KqBNrds~nxdyEFK56qxuZ7XSpbqSdDvcFmVhT89JLG1zaaspDYyOqXwQJUg2gjdWcMWJNI6azykSO1h0FI7~zwzstbVV52VV14chE09v9xG2189qCy5RY6gaQU9dQ~e02m-EA3qP6mXfrOsKMe0K5a6DQcUEkchTTVP2Qlm4bQiYnOlnLqoRHTVdlr5t1lz16KaWL40GxSC8ENdD3ipoeNkaZCDYfmv4y4hjsY5PJfBoaH1ULCMtbPoVF3ZfUrzHI27mOwXolrXTH4-zXr3a9OEuSFUpWNiNci1seb58s6Kg2CYGWIvIDczBebIIbdLLJO~Vg__',
+    'https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/sAM8WWkN7xIXATkXrcNuyK-img-2_1770837801000_na1fn_ZW52aXJvbm1lbnRhbC1jaGFsbGVuZ2Vz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L3NBTThXV2tON3hJWEFUa1hyY051eUstaW1nLTJfMTc3MDgzNzgwMTAwMF9uYTFmbl9aVzUyYVhKdmJtMWxiblJoYkMxamFHRnNiR1Z1WjJWei5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=RnhlBdPq1RbSnCVbJ70rqz2rmXRjhc5tl3xPBaO39Xs0yCttY8O8yDyADgaHmMoiqgEG5csPWlNLXE7fwVpJL2ytUKkHfyNaH6G6tyOo3LFWg8rAfQxokR0vjd1~yT8A2zjWHJydmILC8LK-POja7NeMEJ4XGJqtlWhMAvrVG1Bls5OqIXXhBvRn8qoAprf8nPH9MDM07OQZpBHoqXakpocI3ly0tc~3Z0eK8rliXyseAHttBdzkNsvNCpoaKPHWy52PHuTUy7SpqP5Ct5jwA21B5Fk~~hoxvY3b1DKLFaas4lnig04XilxjTHnk-h8vqmp2qX-~JZDysF5trHZP6w__'
   ];
 
   const filteredPoints = selectedType === 'all' 
@@ -129,6 +127,14 @@ export default function Geography() {
       default:
         return AlertCircle;
     }
+  };
+
+  const handleNextMap = () => {
+    setCurrentMapIndex((prev) => (prev + 1) % mapImages.length);
+  };
+
+  const handlePrevMap = () => {
+    setCurrentMapIndex((prev) => (prev - 1 + mapImages.length) % mapImages.length);
   };
 
   return (
@@ -203,12 +209,35 @@ export default function Geography() {
                 </Button>
               </div>
 
-              {/* Map Container */}
-              <Card className="p-6 bg-gradient-to-br from-secondary/10 to-primary/10 h-96 flex items-center justify-center">
-                <div className="text-center">
+              {/* Map Container with Navigation */}
+              <Card className="p-6 bg-gradient-to-br from-secondary/10 to-primary/10">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-primary">الخريطة {currentMapIndex + 1} من {mapImages.length}</h3>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handlePrevMap}
+                      className="flex items-center gap-1"
+                    >
+                      <ChevronRight size={16} />
+                      السابقة
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleNextMap}
+                      className="flex items-center gap-1"
+                    >
+                      التالية
+                      <ChevronLeft size={16} />
+                    </Button>
+                  </div>
+                </div>
+                <div className="h-96 flex items-center justify-center overflow-hidden rounded-lg">
                   <img
-                    src="https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/sAM8WWkN7xIXATkXrcNuyK-img-5_1770837799000_na1fn_ZWFzdGVybi1wcm92aW5jZS1tYXA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L3NBTThXV2tON3hJWEFUa1hyY051eUstaW1nLTVfMTc3MDgzNzc5OTAwMF9uYTFmbl9aV0Z6ZEdWeWJpMXdjbTkyYVc1alpTMXRZWEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=c04j39jEPa9V1CVP4KqBNrds~nxdyEFK56qxuZ7XSpbqSdDvcFmVhT89JLG1zaaspDYyOqXwQJUg2gjdWcMWJNI6azykSO1h0FI7~zwzstbVV52VV14chE09v9xG2189qCy5RY6gaQU9dQ~e02m-EA3qP6mXfrOsKMe0K5a6DQcUEkchTTVP2Qlm4bQiYnOlnLqoRHTVdlr5t1lz16KaWL40GxSC8ENdD3ipoeNkaZCDYfmv4y4hjsY5PJfBoaH1ULCMtbPoVF3ZfUrzHI27mOwXolrXTH4-zXr3a9OEuSFUpWNiNci1seb58s6Kg2CYGWIvIDczBebIIbdLLJO~Vg__"
-                    alt="خريطة المنطقة الشرقية"
+                    src={mapImages[currentMapIndex]}
+                    alt={`خريطة المنطقة الشرقية ${currentMapIndex + 1}`}
                     className="w-full h-full object-contain"
                   />
                 </div>

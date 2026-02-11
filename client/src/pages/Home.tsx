@@ -19,21 +19,21 @@ export default function Home() {
   const [testimonies, setTestimonies] = useState<ParentTestimony[]>([
     {
       id: '1',
-      name: 'أم محمد',
+      name: 'والدة جنى العمرة',
       location: 'الدمام',
       problem: 'لاحظت زيادة التلوث الهوائي في الحي، خاصة في أوقات الذروة الصناعية',
       timestamp: '2026-02-10'
     },
     {
       id: '2',
-      name: 'والد أحمد',
+      name: 'والدة رتاج اليوسف',
       location: 'الخبر',
       problem: 'المياه الجوفية في المنطقة تحتاج إلى حماية أفضل من التلوث الصناعي',
       timestamp: '2026-02-09'
     },
     {
       id: '3',
-      name: 'أم فاطمة',
+      name: 'والد روان العويشير',
       location: 'الظهران',
       problem: 'التصحر يؤثر على المساحات الخضراء في مدارسنا وحيّنا',
       timestamp: '2026-02-08'
