@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Brain, Users, Heart, Phone } from 'lucide-react';
+import { Brain, Users, Heart, Phone, BookOpen } from 'lucide-react';
 
 interface PsychologicalExperience {
   id: string;
@@ -19,14 +19,14 @@ export default function Psychology() {
   const [experiences, setExperiences] = useState<PsychologicalExperience[]>([
     {
       id: '1',
-      author: 'مريم',
-      experience: 'قراءة الشعر ساعدتني على التعامل مع القلق والتوتر. الكلمات الجميلة تهدئ روحي.',
+      author: 'سارة',
+      experience: 'قراءة الشعر الكلاسيكي ساعدتني على فهم مشاعري بشكل أعمق. الكلمات الجميلة تعطيني الراحة النفسية والسلام الداخلي.',
       timestamp: '2026-02-10'
     },
     {
       id: '2',
-      author: 'أحمد',
-      experience: 'الانضمام إلى مجموعة نقاش أدبية ساعدني على الشعور بالانتماء والتقبل الاجتماعي.',
+      author: 'محمد',
+      experience: 'الانضمام إلى مجموعة نقاش أدبية غيّر حياتي. شعرت بالانتماء والقبول الاجتماعي من خلال مشاركة الأفكار والمشاعر.',
       timestamp: '2026-02-09'
     }
   ]);
@@ -51,39 +51,44 @@ export default function Psychology() {
     }
   };
 
-  const supportCenters = [
+  const psychologicalTopics = [
     {
-      name: 'مركز إرادة الدمام',
-      services: ['علاج فردي', 'جلسات جماعية', 'ورش عمل تعليمية', 'دعم نفسي للعائلات'],
-      description: 'مركز متخصص في الدعم النفسي والعلاج السلوكي'
+      title: 'الصحة النفسية والأدب',
+      description: 'الأدب والثقافة يلعبان دوراً مهماً في تحسين الصحة النفسية. قراءة الشعر والأدب تساعد على التعبير عن المشاعر المكبوتة وتقليل التوتر والقلق. الشعر خاصة يعتبر وسيلة علاجية فعالة حيث يساعد على معالجة الصدمات النفسية والحزن. الاستماع إلى الموسيقى والشعر يحفز إفراز الهرمونات المسؤولة عن السعادة والاسترخاء. كما أن المشاركة في الأنشطة الثقافية والأدبية تزيد من الثقة بالنفس والشعور بالانتماء.',
+      icon: Brain
     },
     {
-      name: 'برامج الصحة النفسية المجتمعية',
-      services: ['استشارات مجانية', 'برامج توعية', 'أنشطة ترفيهية', 'دعم الشباب'],
-      description: 'برامج موجهة لدعم الصحة النفسية في المجتمع'
+      title: 'التواصل الاجتماعي والعزلة',
+      description: 'الشعور بالوحدة والعزلة يؤثر بشكل كبير على الصحة النفسية والجسدية. المشاركة في مجموعات ثقافية وأدبية توفر فرصة للتواصل الاجتماعي والشعور بالانتماء. النقاشات الأدبية والثقافية تساعد على تبادل الأفكار والمشاعر مع الآخرين. العلاقات الاجتماعية القوية تعتبر من أهم عوامل الصحة النفسية. المجتمع الثقافي يوفر بيئة آمنة للتعبير عن الذات والشعور بالقبول.',
+      icon: Users
+    },
+    {
+      title: 'الحب والعلاقات الإنسانية',
+      description: 'الحب والعلاقات الإنسانية هي من أساسيات الحياة النفسية الصحية. الأدب العربي يعبر عن الحب بطرق عميقة وجميلة. فهم الحب من خلال الأدب يساعد على بناء علاقات صحية. الشعر الغزلي يعكس تطور الحب والعلاقات عبر التاريخ. الحب ليس مجرد مشاعر بل هو فهم عميق للآخر والقدرة على التضحية والعطاء. الأدب يعلمنا كيفية التعبير عن الحب بطرق صحية وبناءة.',
+      icon: Heart
+    },
+    {
+      title: 'الضغوط النفسية والتعامل معها',
+      description: 'الضغوط النفسية جزء من الحياة اليومية. التعامل الصحيح معها يتطلب استراتيجيات فعالة. الأدب والثقافة توفر وسائل للتعامل مع الضغوط. قراءة الشعر والأدب تساعد على الاسترخاء وتقليل مستويات التوتر. الكتابة والتعبير عن المشاعر تساعد على معالجة الضغوط. المشاركة في الأنشطة الثقافية توفر تنفيساً صحياً للمشاعر السلبية. التأمل والتفكر في الأدب الحكيم يساعد على اكتساب منظور جديد للحياة.',
+      icon: BookOpen
     }
   ];
 
-  const psychologicalIssues = [
+  const supportResources = [
     {
-      title: 'التوتر والقلق',
-      description: 'التوتر والقلق من أكثر المشاكل النفسية انتشاراً. يمكن للأدب والفن أن يساعد على تخفيف هذه الضغوط.',
-      percentage: 45
+      title: 'الخطوط الساخنة للدعم النفسي',
+      content: 'توفر خطوط ساخنة متخصصة الاستشارة النفسية المجانية والسرية. يمكن التحدث مع متخصصين مدربين في أي وقت. الخدمة متاحة 24/7 للأشخاص الذين يحتاجون إلى دعم فوري.',
+      icon: Phone
     },
     {
-      title: 'الاكتئاب',
-      description: 'الاكتئاب يؤثر على جودة الحياة. التواصل الاجتماعي والأنشطة الثقافية مهمة للتعافي.',
-      percentage: 28
+      title: 'مراكز الصحة النفسية',
+      content: 'تقدم مراكز الصحة النفسية خدمات استشارية وعلاجية متخصصة. توفر جلسات فردية وجماعية. تقدم برامج توعية وورش عمل تثقيفية حول الصحة النفسية.',
+      icon: Brain
     },
     {
-      title: 'مشاكل الشباب',
-      description: 'الشباب يواجهون تحديات فريدة. الدعم الأسري والمجتمعي ضروري.',
-      percentage: 35
-    },
-    {
-      title: 'الوحدة والعزلة',
-      description: 'الشعور بالوحدة يؤثر على الصحة النفسية. المجتمعات الثقافية توفر الدعم والانتماء.',
-      percentage: 32
+      title: 'المجموعات الدعمية',
+      content: 'المجموعات الدعمية توفر بيئة آمنة لمشاركة التجارب والمشاعر. تساعد على الشعور بأنك لست وحدك في معاناتك. تقدم استراتيجيات عملية للتعامل مع المشاكل النفسية.',
+      icon: Users
     }
   ];
 
@@ -92,16 +97,16 @@ export default function Psychology() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
+      <section className="relative h-96 overflow-hidden">
         <img
-          src="https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/WJh5uPcmED78JqmtPMZQ2Y-img-2_1770838980000_na1fn_cHN5Y2hvbG9naWNhbC13ZWxsbmVzcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L1dKaDV1UGNtRUQ3OEpxbXRQTVpRMlktaW1nLTJfMTc3MDgzODk4MDAwMF9uYTFmbl9jSE41WTJodmJHOW5hV05oYkMxM1pXeHNibVZ6Y3cucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=gwRAodKKzFq5D~bHk--Ckpkh10HUUct4x3ZRqia-6oM4U7PgYUW7scPP5561FXU1J32UzYYCNNyvymMO6QwPzMz8Mb5XCo2APu5OCyTevUBr46I-wJbm2tlYgfbOqzQsRaM4Gb1Ko1wqwrnq8XOUToayl6Renz3iyF9Fo-ADbQNhEuyOmC-kkLnIO08tXqiAPCSgfdLeknofASHv0DYz9pxhCKbRds~dHw6a2KfcQyGx~jJmXNKWazr3UF5bsmo9rdbagIVLTeFc9yj4YfpT1J96X1GL-7LgL1T0rEwS8XqXUwdm1QvxV2snhbzQgDE9WbZKZD1Juofn-2DJslPF7g__"
+          src="https://private-us-east-1.manuscdn.com/sessionFile/YfhCup8J8TNAVTBxsWdySW/sandbox/KKzXi8lCJ3FUaXxFXp3gir-img-3_1770840101000_na1fn_cHN5Y2hvbG9naWNhbC13ZWxsbmVzcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvWWZoQ3VwOEo4VE5BVlRCeHNXZHlTVy9zYW5kYm94L0tLelhpOGxDSjNGVWFYeEZYcDNnaXItaW1nLTNfMTc3MDg0MDEwMTAwMF9uYTFmbl9jSE41WTJodmJHOW5hV05oYkMxM1pXeHNibVZ6Y3cucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fIlVt8BB-R5wzL0dgQdgMG28P1tE9eRKMyUZ3U7Q1s0JQ5PUfUIdK2ba4WeXZjouFI9l0Gw6ZzRgW9CX2hCyp6wWufUJPIb1FdPjcaSuXsj4nWBUcry9RNdnlqkwVMtEdhrdgd7DTlPTfhA9HPOtXoDYuB3l7uEC6jFpIYxoEMXHH39HYk-s-~EhlI9ffS1ZrlnZHHe0bBFvUtca-lxO9vLu2-a3G~d7dG4XH0MXwdNkgbxvBIChMVGnzS4gkt7fXRcIuMvy8vxuFIWO0wIalXexU0gLUT~w1Mfn1Sl5SYikH4~TKpIRfpVeaQ5HLQAJrwHKpzKmxUElAylIroY0tA__"
           alt="الصحة النفسية"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">الصحة النفسية والتجارب الاجتماعية</h1>
-            <p className="text-lg md:text-xl">فهم تأثير البيئة والمجتمع على صحتنا النفسية</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">الدراسات النفسية والاجتماعية</h1>
+            <p className="text-xl md:text-2xl">الصحة النفسية والثقافة والعلاقات الإنسانية</p>
           </div>
         </div>
       </section>
@@ -110,69 +115,86 @@ export default function Psychology() {
       <main className="flex-grow">
         <section className="container mx-auto px-4 py-16">
           {/* Introduction */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <Card className="p-8 bg-secondary/10">
-              <h2 className="text-2xl font-bold mb-4 text-primary">مقدمة عامة</h2>
-              <p className="text-lg leading-relaxed text-foreground">
-                الصحة النفسية والاجتماعية في مجتمعنا تتأثر بالبيئة، التحولات الاقتصادية، والتغيرات الثقافية. الدراسة تركز على كيفية إدارة الضغوط، التفاعل الاجتماعي، ودور المجتمع والأسرة في دعم النفسية. الأدب والثقافة يلعبان دوراً مهماً في تحسين الصحة النفسية والاجتماعية.
-              </p>
-            </Card>
-          </div>
+          <Card className="p-8 bg-secondary/10 mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-primary">مقدمة عامة</h2>
+            <p className="text-lg leading-relaxed text-foreground mb-4">
+              الصحة النفسية والاجتماعية أساس الحياة السعيدة والمنتجة. في عالمنا المعاصر، نواجه ضغوطاً نفسية متزايدة من الحياة اليومية والتحديات الاجتماعية والاقتصادية. الأدب والثقافة يلعبان دوراً مهماً في تحسين الصحة النفسية والاجتماعية. الفهم العميق للنفس البشرية والعلاقات الإنسانية يساعدنا على بناء حياة أكثر توازناً وسعادة.
+            </p>
+            <p className="text-lg leading-relaxed text-foreground">
+              هذه الدراسة تركز على العلاقة بين الأدب والثقافة والصحة النفسية. نستكشف كيف يمكن للأدب أن يساعد على معالجة المشاكل النفسية وتحسين العلاقات الاجتماعية. نناقش أهمية التواصل الاجتماعي والانتماء إلى مجتمع ثقافي في تحسين الصحة النفسية.
+            </p>
+          </Card>
 
-          <Tabs defaultValue="issues" className="w-full">
+          <Tabs defaultValue="topics" className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="issues">المشاكل النفسية</TabsTrigger>
-              <TabsTrigger value="centers">مراكز الدعم</TabsTrigger>
+              <TabsTrigger value="topics">الموضوعات النفسية</TabsTrigger>
+              <TabsTrigger value="resources">الموارد والدعم</TabsTrigger>
               <TabsTrigger value="experiences">التجارب</TabsTrigger>
             </TabsList>
 
-            {/* Issues Tab */}
-            <TabsContent value="issues" className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {psychologicalIssues.map((issue, idx) => (
-                  <Card key={idx} className="p-6">
-                    <h3 className="text-lg font-bold mb-2 text-primary flex items-center gap-2">
-                      <Brain className="w-5 h-5" />
-                      {issue.title}
+            {/* Topics Tab */}
+            <TabsContent value="topics" className="space-y-6">
+              {psychologicalTopics.map((topic, idx) => {
+                const Icon = topic.icon;
+                return (
+                  <Card key={idx} className="p-8 border-l-4 border-primary">
+                    <h3 className="text-2xl font-bold mb-4 text-primary flex items-center gap-3">
+                      <Icon className="w-6 h-6" />
+                      {topic.title}
                     </h3>
-                    <p className="text-foreground mb-4">{issue.description}</p>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-primary h-2 rounded-full transition-all"
-                        style={{ width: `${issue.percentage}%` }}
-                      />
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-2">{issue.percentage}% من الحالات</p>
+                    <p className="text-lg leading-relaxed text-foreground">{topic.description}</p>
                   </Card>
-                ))}
-              </div>
+                );
+              })}
             </TabsContent>
 
-            {/* Support Centers Tab */}
-            <TabsContent value="centers" className="space-y-6">
-              {supportCenters.map((center, idx) => (
-                <Card key={idx} className="p-6 border-l-4 border-primary">
-                  <h3 className="text-xl font-bold mb-2 text-primary flex items-center gap-2">
-                    <Phone className="w-5 h-5" />
-                    {center.name}
-                  </h3>
-                  <p className="text-foreground mb-4">{center.description}</p>
-                  <div className="bg-primary/5 rounded-lg p-4">
-                    <h4 className="font-bold text-primary mb-3 flex items-center gap-2">
-                      <Users className="w-4 h-4" />
-                      الخدمات المتاحة:
-                    </h4>
-                    <ul className="space-y-2">
-                      {center.services.map((service, i) => (
-                        <li key={i} className="text-foreground flex gap-2">
-                          <span className="text-primary">✓</span>
-                          <span>{service}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </Card>
-              ))}
+            {/* Resources Tab */}
+            <TabsContent value="resources" className="space-y-6">
+              <Card className="p-8 bg-primary/5">
+                <h3 className="text-2xl font-bold mb-6 text-primary">موارد الدعم النفسي والاجتماعي</h3>
+                <p className="text-lg leading-relaxed text-foreground mb-8">
+                  توجد عدة موارد وخدمات متاحة لدعم الصحة النفسية والاجتماعية. يمكن الوصول إلى هذه الخدمات من خلال مختلف القنوات. الأهم هو عدم التردد في طلب المساعدة عند الحاجة.
+                </p>
+              </Card>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {supportResources.map((resource, idx) => {
+                  const Icon = resource.icon;
+                  return (
+                    <Card key={idx} className="p-6">
+                      <Icon className="w-12 h-12 text-primary mb-4" />
+                      <h4 className="text-xl font-bold text-primary mb-3">{resource.title}</h4>
+                      <p className="text-foreground leading-relaxed">{resource.content}</p>
+                    </Card>
+                  );
+                })}
+              </div>
+
+              <Card className="p-8 bg-accent/10">
+                <h3 className="text-2xl font-bold mb-4 text-primary">نصائح عملية للصحة النفسية</h3>
+                <ul className="space-y-3">
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span className="text-foreground">قراءة الأدب والشعر بانتظام لتحسين المزاج والتقليل من التوتر</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span className="text-foreground">المشاركة في مجموعات ثقافية واجتماعية للشعور بالانتماء</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span className="text-foreground">التعبير عن المشاعر من خلال الكتابة والفن</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span className="text-foreground">الاستماع إلى الموسيقى والشعر المفضل</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span className="text-foreground">طلب المساعدة المهنية عند الحاجة دون تردد</span>
+                  </li>
+                </ul>
+              </Card>
             </TabsContent>
 
             {/* Experiences Tab */}
@@ -187,7 +209,7 @@ export default function Psychology() {
                     className="bg-background"
                   />
                   <Textarea
-                    placeholder="كيف تؤثر البيئة أو المجتمع على صحتك النفسية؟"
+                    placeholder="كيف ساعدك الأدب أو الثقافة على تحسين صحتك النفسية؟"
                     value={newExperience.experience}
                     onChange={(e) => setNewExperience({ ...newExperience, experience: e.target.value })}
                     className="bg-background min-h-24"
