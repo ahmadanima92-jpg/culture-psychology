@@ -2,13 +2,6 @@ import { useState } from 'react';
 import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
 
-/**
- * Navigation Component
- * Design Philosophy: Sustainable Modernity
- * - Clean, modern navigation bar with environmental color scheme
- * - Responsive design with mobile menu
- * - Smooth transitions and hover effects
- */
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,13 +16,16 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo and Teachers Info */}
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">🌍</span>
               </div>
-              <span className="font-bold text-lg text-primary hidden sm:inline">البيئة والتقنية</span>
+              <div className="hidden sm:block">
+                <span className="font-bold text-lg text-primary block">البيئة والتقنية</span>
+                <span className="text-xs text-muted-foreground">شقراء مجرشي | سارة آل باطحين | نورة القصيبي</span>
+              </div>
             </div>
           </Link>
 

@@ -27,14 +27,14 @@ export default function Home() {
     {
       id: '2',
       name: 'والدة رتاج اليوسف',
-      location: 'الخبر',
+      location: 'الدمام',
       problem: 'المياه الجوفية في المنطقة تحتاج إلى حماية أفضل من التلوث الصناعي',
       timestamp: '2026-02-09'
     },
     {
       id: '3',
       name: 'والد روان العويشير',
-      location: 'الظهران',
+      location: 'الدمام',
       problem: 'التصحر يؤثر على المساحات الخضراء في مدارسنا وحيّنا',
       timestamp: '2026-02-08'
     }
@@ -81,12 +81,7 @@ export default function Home() {
       description: 'شارك في المجتمع الرقمي ورصد المشاكل البيئية بتقنيات حديثة',
       href: '/digital-citizenship'
     },
-    {
-      icon: Leaf,
-      title: 'الاستدامة',
-      description: 'اكتشف الحلول المستدامة والمبادرات البيئية في المنطقة الشرقية',
-      href: '/sustainability'
-    }
+
   ];
 
   return (
